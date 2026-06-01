@@ -93,6 +93,7 @@ class GameManager {
 
   void drawFishingPhase() {
     if (currentFish != null) {
+      currentFish.update();
       fishingTimer++;
       if (fishingTimer >= fishingDuration) {
         startWaiting();
