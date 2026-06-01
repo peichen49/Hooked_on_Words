@@ -8,8 +8,8 @@ Gif oceanGif;   // Declare the GIF variable
 void setup() {
   size(800, 450);
   
-  bgImgBack = loadImage("background_1.jpg");
-  bgImgFront = loadImage("background_2.png");
+  bgImgBack = loadImage("background_2.png");
+  bgImgFront = loadImage("background_1.png");
   
   // Load the GIF from your data folder and pass 'this' sketch context
   oceanGif = new Gif(this, "ocean.gif");
