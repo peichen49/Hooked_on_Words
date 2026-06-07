@@ -146,6 +146,7 @@ class GameManager {
       float hookX = currentFish.fishX - 24;
       if (hookX <= fishCaughtX) {
         score += currentFish.fishScore;
+        hookSfx.play();
         startWaiting();
         return;
       }
@@ -159,7 +160,10 @@ class GameManager {
 
   void loseLife() {
     lives--;
-    if (lives <= 0) gameState = 2;
+    loseFish.play();
+    if (lives <= 0) {
+    gameState = 2;
+    gameOver.play();}
     else startWaiting();
   }
 
